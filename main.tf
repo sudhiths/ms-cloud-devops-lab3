@@ -23,3 +23,7 @@ module "hello_app_prod" {
   environment_name = "prod"
   replica_count    = 3
 }
+
+output "url" {
+  value = "http://192.168.49.2:${module.hello_app_dev.node_port}"
+}
